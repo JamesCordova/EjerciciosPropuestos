@@ -12,10 +12,12 @@
             <input type="text" id="ancho" name="ancho">
         </form>
         <button onclick="generarTabla()">Enviar</button>
+        <div id="demo"></div>
         <script>
             function generarTabla(){
                 let largo = document.getElementById("largo").value;
                 let ancho = document.getElementById("ancho").value;
+                let contenido;
                 let tabla = "<table>";
                 let fila;
                 for(let i = 0; i < ancho; i++){
@@ -24,6 +26,8 @@
                 }
                 tabla += "</tabla>"
                 console.log(tabla);
+                contenido = tabla + "<button onclick=''><button>";
+                document.getElementById("demo").innerHTML = contenido;
             }
             function generarFila(largo,ind){
                 let filahtml = "<tr>";
