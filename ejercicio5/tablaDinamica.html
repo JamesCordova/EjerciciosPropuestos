@@ -13,6 +13,7 @@
         </form>
         <button type="button" onclick="generarTabla()">Enviar</button>
         <div id="demo"></div>
+        <div id="suma"></div>
         <script>
             function generarTabla(){   
                 let largo = document.getElementById("largo").value;
@@ -53,7 +54,7 @@
                     }
                 }
                 console.log(suma);
-                return suma;
+                document.getElementById("suma").innerHTML = suma;
             }
         </script>
     </body>
