@@ -5,12 +5,19 @@
         <title>Ejercicio 4</title>
     </head>
     <body>
-        <form>
+        <form onchange="codigoSesion()">
             <input type="text" id="url" name="url">
         </form>
         <div id="demo"></div>
         <script>
-            
+            function codigoSesion(){
+                let url = document.getElementById("url").value;
+                // Despues de revisar w3 schools
+                let patron = /[/][a-z][?]/g;
+                let codigoSlash = patron.exec(url);
+                patron = /[a-z]/g;
+                let codigo;
+            }
         </script>
     </body>
 </html>
