@@ -7,7 +7,18 @@
 	<body>
 		
 		<script>
-			
+			function getDia(fecha){
+				fecha = new Date();
+				numDia = fecha.getDay();
+				switch(numDia){
+					case 0:
+						return "Domingo";
+						break;
+					case 1:
+						return "Lunes";
+						break;
+				}
+			}
 		</script>
 	</body>
 </html>
