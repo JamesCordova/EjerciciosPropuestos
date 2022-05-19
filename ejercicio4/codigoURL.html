@@ -12,13 +12,15 @@
         <script>
             function codigoSesion(){
                 let url = document.getElementById("url").value;
+                console.log(url);
                 // Despues de revisar w3 schools
                 // no es necesario g
-                let patron1 = /[/][a-z][?]/;
+                let patron1 = /\/[a-z]+\-[a-z]+\-[a-z]+\?/i;
                 let codigoSlash = url.match(patron1);
+                console.log(codigoSlash);
                 let patron2 = /-/;
                 let codigo = '';
-                for(str in codigoSlash){
+                for(let str in codigoSlash){
                     if(!str.test(patron2)){
                         console.log(str);
                         codigo += str;
