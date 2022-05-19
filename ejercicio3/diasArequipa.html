@@ -5,7 +5,7 @@
         <title>Ejercicio 3</title>
     </head>
     <body>
-        <div id="demo" onload="diaArequipa()"></div>
+        <div id="demo"></div>
         <script>
             function diaArequipa(){
                 let fecha = new Date();
@@ -36,14 +36,16 @@
                     diasMeses = [31,28,31,30,31,30,31,31,30,31,30,31];
                 }
                 // los dias hasta el anterior mes
-                let dias;
-                for(let i = 0; i < fecha.getMonth(), i++){
+                let dias = 0;
+                for(let i = 0; i < fecha.getMonth(); i++){
                     dias += diasMeses[i];
                 }
                 // los dias sumados al de este mes
                 dias += fecha.getDate();
+                console.log(dias);
                 return dias; 
             }
+            diaArequipa();
         </script>
     </body>
 </html>
