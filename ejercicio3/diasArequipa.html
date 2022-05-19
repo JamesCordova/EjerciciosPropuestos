@@ -9,7 +9,17 @@
         <script>
             function diaArequipa(){
                 let fecha = new Date();
-                const diaAQP = new Date(fecha.getFullYear(), 7, 15)
+                // 7 porque agosto es el septimo contando a enero como 0
+                const diaAQP = new Date(fecha.getFullYear(), 7, 15);
+                if(fecha.getMonth() > diaAQP.getMonth() && fecha.getDay() > diaAQP.getDay()){
+                    //llamaremos a una funcion diferente
+                }
+                else{
+                    //llamamos a otra función
+                }
+                
+            }
+            function menosAño(fecha){
                 
             }
         </script>
