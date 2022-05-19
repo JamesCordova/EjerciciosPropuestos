@@ -11,7 +11,7 @@
             <label for="ancho">Ancho: </label>
             <input type="text" id="ancho" name="ancho">
         </form>
-        <button onclick="generarTabla()">Enviar</button>
+        <button type="button" onclick="generarTabla()">Enviar</button>
         <div id="demo"></div>
         <script>
             function generarTabla(){
@@ -26,7 +26,7 @@
                 }
                 tabla += "</tabla>"
                 console.log(tabla);
-                contenido = tabla + "<button onclick=''><button>";
+                contenido = tabla + "<button type='button' onclick='sumarValores()'></button>";
                 document.getElementById("demo").innerHTML = contenido;
             }
             function generarFila(largo,ind){
@@ -37,6 +37,9 @@
                 filahtml += "</tr>";
                 console.log(filahtml);
                 return filahtml;
+            }
+            function sumarValores(){
+
             }
         </script>
     </body>
