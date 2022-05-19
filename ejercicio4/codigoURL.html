@@ -14,12 +14,13 @@
                 let url = document.getElementById("url").value;
                 // Despues de revisar w3 schools
                 // no es necesario g
-                let patron1 = /[/][a-z][?]/g;
-                let codigoSlash = patron1.match(url);
-                let patron2 = /-/g;
+                let patron1 = /[/][a-z][?]/;
+                let codigoSlash = url.match(patron1);
+                let patron2 = /-/;
                 let codigo = '';
                 for(str in codigoSlash){
                     if(!str.test(patron2)){
+                        console.log(str);
                         codigo += str;
                     }
                 }
