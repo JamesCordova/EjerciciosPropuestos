@@ -16,8 +16,8 @@
             function generarTabla(){
                 let largo = document.getElementById("largo").value;
                 let ancho = document.getElementById("ancho").value;
-                let fila = generarFila(largo, 0);
                 let tabla = "<table>";
+                let fila;
                 for(let i = 0; i < ancho; i++){
                     fila = generarFila(largo, i);
                     tabla += fila;
@@ -32,6 +32,7 @@
                 }
                 filahtml += "</tr>";
                 console.log(filahtml);
+                return filahtml;
             }
         </script>
     </body>
