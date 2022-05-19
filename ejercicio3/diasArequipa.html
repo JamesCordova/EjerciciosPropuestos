@@ -20,7 +20,24 @@
                 
             }
             function menosAño(fecha){
-                
+
+            }
+            function fechaToDias(fecha){
+                let diasMeses;
+                if(fecha.getFullYear() % 4 == 0){
+                    diasMeses = [31,29,31,30,31,30,31,31,30,31,30,31];
+                }
+                else{
+                    diasMeses = [31,28,31,30,31,30,31,31,30,31,30,31];
+                }
+                // los dias hasta el anterior mes
+                let dias;
+                for(let i = 0; i < fecha.getMonth(), i++){
+                    dias += diasMeses[i];
+                }
+                // los dias sumados al de este mes
+                dias += fecha.getDate();
+                return dias; 
             }
         </script>
     </body>
