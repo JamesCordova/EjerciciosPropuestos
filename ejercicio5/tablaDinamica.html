@@ -16,10 +16,15 @@
             function generarTabla(){
                 let largo = document.getElementById("largo").value;
                 let ancho = document.getElementById("ancho").value;
-                let fila = generarFila(largo);
+                let fila = generarFila(largo, 0);
             }
-            function generarFila(largo){
+            function generarFila(largo,ind){
                 let filahtml = "<tr>";
+                for(let i = 0; i < largo; i++){
+                    filahtml += "<td><input type='text' id='"+ ind + i + "'></td>" 
+                }
+                filahtml += "</tr>";
+                console.log(filahtml); 
             }
         </script>
     </body>
