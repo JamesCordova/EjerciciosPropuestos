@@ -5,7 +5,7 @@
         <title>Ejercicio 2</title>
     </head>
     <body>
-        <form onkeyup="invertirTexto()">
+        <form onchange="invertirTexto()">
             <input type="text" name="texto" id="texto">
         </form>
         <div id="demo"></div>
@@ -15,8 +15,8 @@
                 console.log(string);
                 let stringInv = '';
                 for(let i = string.length; i > 0; i--){
-                    console.log(string.substr(i--,i));
-                    stringInv = stringInv + string.substr(i--,i);
+                    console.log(string.substring(i--,i));
+                    stringInv = stringInv + string.substring(i--,i);
                 }
                 console.log(stringInv);
                 document.getElementById("demo").innerHTML = stringInv;
