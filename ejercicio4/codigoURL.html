@@ -15,13 +15,15 @@
                 console.log(url);
                 // Despues de revisar w3 schools
                 // no es necesario g
-                let patron1 = /\/[a-z]+\-[a-z]+\-[a-z]+\?/i;
-                let codigoSlash = url.match(patron1);
+                let patron1 = /[a-z]+\-[a-z]+\-[a-z]+/i;
+                let codigoSlash = url.match(patron1) + "";
                 console.log(codigoSlash);
-                let patron2 = /-/;
+                let patron2 = "-"
                 let codigo = '';
-                for(let str in codigoSlash){
-                    if(!str.test(patron2)){
+                let str;
+                for(let i = 0; i < codigoSlash.length; i++){
+                    str = codigoSlash.substring(i,i+1);        
+                    if(!(str == patron2)){
                         console.log(str);
                         codigo += str;
                     }
