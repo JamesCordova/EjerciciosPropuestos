@@ -17,6 +17,13 @@
                 let largo = document.getElementById("largo").value;
                 let ancho = document.getElementById("ancho").value;
                 let fila = generarFila(largo, 0);
+                let tabla = "<table>";
+                for(let i = 0; i < ancho; i++){
+                    fila = generarFila(largo, i);
+                    tabla += fila;
+                }
+                tabla += "</tabla>"
+                console.log(tabla);
             }
             function generarFila(largo,ind){
                 let filahtml = "<tr>";
@@ -24,7 +31,7 @@
                     filahtml += "<td><input type='text' id='"+ ind + "_" + i + "'></td>" 
                 }
                 filahtml += "</tr>";
-                console.log(filahtml); 
+                console.log(filahtml);
             }
         </script>
     </body>
