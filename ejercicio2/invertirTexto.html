@@ -9,13 +9,14 @@
             <input type="text" name="texto" id="texto">
             <input type="submit">
         </form>
+        <div id="demo"></div>
         <script>
             function invertirTexto(string){
                 let stringInv = '';
                 for(let i = string.length; i > 0; i--){
                     stringInv = cadenaInv + string.substr(i--,i);
                 }
-                document.getElementById().innerHTML = stringInv;
+                document.getElementById("demo").innerHTML = stringInv;
             }
         </script>
     </body>
