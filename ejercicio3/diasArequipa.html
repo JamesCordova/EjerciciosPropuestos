@@ -13,19 +13,16 @@
                 const diaAQP = new Date(fecha.getFullYear(), 7, 15);
                 let diasFaltantes;
                 if(fecha.getMonth() > diaAQP.getMonth() && fecha.getDay() > diaAQP.getDay()){
-                    //llamaremos a una funcion diferente
+                    //sumamos los dias que faltan para completar el año mas los dias hasta el dia de AQP
                     diasFaltantes = fechaToDias(diaAQP) + (fechaToDias(new Date(fecha.getFullYear(),11,31) - fechaToDias(fecha)));
                 }
                 else{
-                    //llamamos a otra función
+                    //restamos los dias hasta el dia de AQP menos la fecha actual
                     diasFaltantes = fechaToDias(diaAQP) - fechaToDias(fecha);
                 }
                 console.log(diasFaltantes);
                 document.getElementById("demo").innerHTML = "Quedan " + diasFaltantes + " dias";
                 
-            }
-            function menosAño(fecha){
-
             }
             function fechaToDias(fecha){
                 let diasMeses;
