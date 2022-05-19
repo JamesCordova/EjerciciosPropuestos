@@ -15,8 +15,7 @@
                 console.log(string);
                 let stringInv = '';
                 for(let i = string.length; i > 0; i--){
-                    console.log(string.substring(i--,i));
-                    stringInv = stringInv + string.substring(i--,i);
+                    stringInv = stringInv + string.substring(i-1,i);
                 }
                 console.log(stringInv);
                 document.getElementById("demo").innerHTML = stringInv;
