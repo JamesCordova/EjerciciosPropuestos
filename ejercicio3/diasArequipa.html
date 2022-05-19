@@ -11,12 +11,17 @@
                 let fecha = new Date();
                 // 7 porque agosto es el septimo contando a enero como 0
                 const diaAQP = new Date(fecha.getFullYear(), 7, 15);
+                let diasFaltantes;
                 if(fecha.getMonth() > diaAQP.getMonth() && fecha.getDay() > diaAQP.getDay()){
                     //llamaremos a una funcion diferente
+                    diasFaltantes = fechaToDias(diaAQP) + (fechaToDias(new Date(fecha.getFullYear(),11,31) - fechaToDias(fecha)));
                 }
                 else{
                     //llamamos a otra función
+                    diasFaltantes = fechaToDias(diaAQP) - fechaToDias(fecha);
                 }
+                console.log(diasFaltantes);
+                document.getElementById("demo").innerHTML = "Quedan " + diasFaltantes + " dias";
                 
             }
             function menosAño(fecha){
