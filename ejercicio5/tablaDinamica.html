@@ -10,8 +10,8 @@
             <input type="text" id="largo" name="largo">
             <label for="ancho">Ancho: </label>
             <input type="text" id="ancho" name="ancho">
-            <button onclick="">Enviar</button>
         </form>
+        <button onclick="generarTabla()">Enviar</button>
         <script>
             function generarTabla(){
                 let largo = document.getElementById("largo").value;
@@ -21,7 +21,7 @@
             function generarFila(largo,ind){
                 let filahtml = "<tr>";
                 for(let i = 0; i < largo; i++){
-                    filahtml += "<td><input type='text' id='"+ ind + i + "'></td>" 
+                    filahtml += "<td><input type='text' id='"+ ind + "_" + i + "'></td>" 
                 }
                 filahtml += "</tr>";
                 console.log(filahtml); 
