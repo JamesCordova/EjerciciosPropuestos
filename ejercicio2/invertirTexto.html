@@ -7,7 +7,6 @@
     <body>
         <form onkeyup="invertirTexto()">
             <input type="text" name="texto" id="texto">
-            <input type="submit">
         </form>
         <div id="demo"></div>
         <script>
@@ -16,8 +15,10 @@
                 console.log(string);
                 let stringInv = '';
                 for(let i = string.length; i > 0; i--){
+                    console.log(string.substr(i--,i));
                     stringInv = stringInv + string.substr(i--,i);
                 }
+                console.log(stringInv);
                 document.getElementById("demo").innerHTML = stringInv;
             }
         </script>
