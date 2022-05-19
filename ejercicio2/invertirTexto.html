@@ -5,13 +5,15 @@
         <title>Ejercicio 2</title>
     </head>
     <body>
-        <form>
+        <form onkeyup="invertirTexto()">
             <input type="text" name="texto" id="texto">
             <input type="submit">
         </form>
         <div id="demo"></div>
         <script>
-            function invertirTexto(string){
+            function invertirTexto(){
+                let string = document.getElementById("texto").value;
+                console.log(string);
                 let stringInv = '';
                 for(let i = string.length; i > 0; i--){
                     stringInv = cadenaInv + string.substr(i--,i);
