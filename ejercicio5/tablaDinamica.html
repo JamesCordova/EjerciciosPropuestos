@@ -14,9 +14,9 @@
         <button type="button" onclick="generarTabla()">Enviar</button>
         <div id="demo"></div>
         <script>
-            function generarTabla(){
-                let largo = document.getElementById("largo").value;
-                let ancho = document.getElementById("ancho").value;
+            let largo = document.getElementById("largo").value;
+            let ancho = document.getElementById("ancho").value;
+            function generarTabla(){    
                 let contenido;
                 let tabla = "<table>";
                 let fila;
@@ -39,7 +39,16 @@
                 return filahtml;
             }
             function sumarValores(){
-                
+                let suma = 0;
+                let valor;
+                for(let i = 0; i < largo; i++){
+                    for(let j = 0; i < ancho; i++){
+                        valor = document.getElementById(i + "_" + j).value;
+                        suma += valor;
+                    }
+                }
+                console.log(suma);
+                return suma;
             }
         </script>
     </body>
