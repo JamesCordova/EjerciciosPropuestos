@@ -25,8 +25,8 @@
                     tabla += fila;
                 }
                 tabla += "</tabla>"
-                console.log(tabla);
-                contenido ="" +  tabla + "<button type='button' onclick='sumarValores()'>Sumar</button>";
+                contenido ="" +  tabla + "\n<button type='button' onclick='sumarValores()'>Sumar</button>";
+                console.log(contenido);
                 document.getElementById("demo").innerHTML = contenido;
             }
             function generarFila(largo,ind){
@@ -39,7 +39,7 @@
                 return filahtml;
             }
             function sumarValores(){
-
+                
             }
         </script>
     </body>
