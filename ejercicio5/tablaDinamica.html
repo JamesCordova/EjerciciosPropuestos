@@ -42,11 +42,13 @@
                 let largo = document.getElementById("largo").value;
                 let ancho = document.getElementById("ancho").value;
                 let suma = 0;
-                let valor;
+                let valor, str;
                 for(let i = 0; i < largo; i++){
-                    for(let j = 0; i < ancho; j++){
-                        //cambiar el string a numero
-                        valor = number(document.getElementById(i + "_" + j).value);
+                    for(let j = 0; j < ancho; j++){
+                        //cambiar el string a numero con la funcion number
+                        str = document.getElementById(i + "_" + j).value
+                        console.log(str)
+                        valor = Number(str);
                         suma += valor;
                     }
                 }
